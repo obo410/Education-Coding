@@ -6,3 +6,15 @@ end
   #Athletics
   #Mariners
   #This method defines the method "baseball_team_list" and prints out the deifned array.
+
+#Another example below
+
+  def Second_baseball_team
+  x = 10 
+  return ["A's", "Angels", "Mariners"] if x == 10
+  ["Yankees", "Cubs"]
+END
+
+p Second_baseball_team
+
+#This will print the array with values "A's", "Angels", and "Mariners". It will not print the array with "Yankees" and "Cubs" because they are not included in the conditional statement. The "Return" command is only used when there is a conditional involved.  
