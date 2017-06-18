@@ -1,0 +1,26 @@
+class Invoice
+  #This is a class method, note the "self" 
+  def self.print_out
+    "Printed out Invoice"
+  end
+  
+  #This is an instance method 
+  def convert_to_pdf
+    "converted to pdf"
+  end
+    
+    def open_doc
+      "Document Opened"
+      
+  end
+end
+
+#There are several ways to call out a class. In this method we can simply tack on the defined object to the class. Therefore, all I have to do to print is to add ".print_out" to my Invoice class. 
+Invoice.print_out #This prints "Printed out Invoice"
+
+#To use the instance method I will have to store the instance to a variable. This can be helpful when using a class that has multiple methods in it.  
+m=Invoice.new 
+m.convert_to_pdf 
+
+y=Invoice.new
+y.open_doc
