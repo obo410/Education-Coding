@@ -1,0 +1,11 @@
+#PEMDAS
+
+#P=parantheses, E=exponents, M=multiplication, D=Division, A=addition, S=subtraction
+
+p 5+15*20-2/6**3-(3+1)
+
+#This will equal 301.
+
+#in the conditional example the items within parantheses are processed first. 
+
+if (x>7 && y<19) || z == 5 
