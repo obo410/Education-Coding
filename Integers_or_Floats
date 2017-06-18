@@ -1,0 +1,14 @@
+#Two different types of data types, floats and integers. 
+
+#typically floats  are used rather than integers. Floats provide decimal data. 
+
+#Run this to see 
+
+p 2.0/216
+
+p 2/216
+
+integer (1,2,3)
+
+float(1.0,2.0,3.0)
+
