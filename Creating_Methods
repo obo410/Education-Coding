@@ -1,0 +1,8 @@
+def baseball_team_list
+  puts ["Angels", "Athletics", "Mariners"]
+end
+  #syntax for writing a method, this one will print 
+  #Angels
+  #Athletics
+  #Mariners
+  #This method defines the method "baseball_team_list" and prints out the deifned array.
