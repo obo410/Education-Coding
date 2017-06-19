@@ -1,0 +1,15 @@
+#Modules are methods (or processes) that can be stored inside of variables 
+full_name=Proc.new { | first, last | first + " " + last } #this creates a new instance of a proc, within the curly brackets are a code block. We have two different arguments, first and last. 
+
+full_name = Proc.new { |first| first*5 }
+p full_name["Isaac"]
+
+#another way we can write these is as follows: 
+full_name = Proc.new do |first|
+  first * 5
+end
+  
+p full_name["Isaac"]
+
+
+#note, ensure that p in proc is capitalized
