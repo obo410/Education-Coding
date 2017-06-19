@@ -1,0 +1,11 @@
+arr = [2, 3, 4, 5, 77, 643]
+
+#array solver one 
+arr.each do |i|
+  p i 
+end
+
+#array solver two 
+arr.each {|i| p i}
+
+#These array solvers solve exactly the same way, note that the curly brackets are acting as the "do" and "end" commands. 
