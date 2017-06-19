@@ -1,0 +1,11 @@
+#Lambdas are very similar to procs. 
+
+first_name = lambda { |first, last| first + "" + last }
+p first_name["isaac", "Becker"]
+
+#Queries are run by lambdas and procs. the most common syntax is using the "stabby lambda" syntax which involves substituting "lambda" with -> and additionally, using regular parantheses rather than curly brackets for the arguments. The example below shows this syntax.
+
+first_name = ->(first,last){first + "" + last }
+p first_name["isaac","becker"]
+
+#most people use the stabby lambda method 
