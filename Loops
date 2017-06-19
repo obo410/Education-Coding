@@ -1,0 +1,11 @@
+#first define the variable, then setup the while loop condition, (think "while this condition is met...then this will occur") then define the interval for the variable and end it. 
+#No other command is required after the loop is ended. The loop will solve when the program is run. 
+
+i = 0 
+
+while i < 10 
+puts "Hey there"
+i += 1 
+end
+
+#While loops require an increment value for the variable. An increment is needed because if there is none then the variable will always meet the while condition. 
