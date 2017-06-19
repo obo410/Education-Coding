@@ -1,0 +1,28 @@
+#Lambdas actually ccount the arguments that you pass to them. 
+#full_name = lambda { |first, last| first + " " + last}
+#p full_name.call("Isaac", "Becker")
+
+#Lambda counts the number of arguments. For example with the current code above "Isaac Becker" will display. However, if I put my middle name between my first and last then the code will run an error essentially saying that it expected two arguments not three. 
+
+#Proc will not count the number of arguments, it will simply accept the first two arguments as the ones that the designer is looking for. For example, the below code will display "Isaac Findlay"
+
+#full_name = Proc.new { |first, last| first + " " + last}
+#p full_name.call("Isaac", "Findlay", "Becker")
+
+#Return behavior 
+#def my_method
+ # x = lambda { return }
+  #x.call 
+  #p "text from within the method"
+#end
+
+#my_method
+
+def my_method
+  x = Proc.new { return }
+  x.call 
+  p "text from within the method"
+end
+
+my_method
+#The lambda will return the text "text from within the method" whereas the proc will return nil. The return will cause the Proc to ignore everything within the method whereas the  lambda will solve the method. 
