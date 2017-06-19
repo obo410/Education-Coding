@@ -1,0 +1,5 @@
+for i in 0..42
+p i 
+end 
+
+#This prints every number from 0 to 42. 
