@@ -1,0 +1,20 @@
+#Given an array of integers, we only want to grab the even integers. Here are three ways of writing it.
+
+(1..10).to_a.select { |x| x.even? }
+
+(1..10).to_a.select(&:even?) #The & means that the function assumes you want to apply the argument to all of the values in the array. 
+  
+(1..10).to_a.select do |x| x.even? 
+
+end 
+  
+  
+#Given an array of string, return only the words that are over 5 letters long. 
+
+arr = %w(The quick brown fox jumped over the lazy dog) #This syntax will treat each word as a separate element in an array. note, using arr = is only defining a variable 
+
+arr.select { |x| x.length >5 }
+
+#Given an array of strings, return all of the vowels. 
+
+%w(a b c d e f g).select { |v| v =~ /[aeiou]/} #What this function does is it iterates over the values within the parantheses, and converts them to elements in an array. It will then store each element as "v". Then it will look if v is one of the elements within the /[]/ set. If v is within the /[]/ set then it will include the element in the set. If it is not then it will not b included. The select portion of the function selects the values within  () that meet the conditions of the argument in /[]/. 
