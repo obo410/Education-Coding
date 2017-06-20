@@ -1,0 +1,12 @@
+#teams is a collecton, within teams are two more collections; Houston Astros and Texas Rangers 
+teams = { "Houston Astros" => {"first base" => "Chris Carter", "second base" => "Jose Altuve", "Shortstop" => "Carlos Correa" }, "Texas Rangers" => {"first base" => "Prince Fielder" , "second base" => "R. Odor", "shortstop" => "Elvis Andrus"} }
+
+teams.each do |team, players| #This is the first iterator, it grabs the team name and the players, team name is printed below, players are run through a separate iterator, see below.
+  puts team 
+  players.each do |position, player| #This iterator first grabs the position and then grabs the #player.
+  p "#{player} starts at #{position}"
+END
+
+#This code will print the players name and position. This code can be useful because the players can be easily changed with the corresponding position. 
+
+#The code has three collections, one teams collection and two individual teams. The first iteration simply grabs the team and players, basically just letting us know that something will be done with both the teams collection and some new function called "Players". We print the team name and then within the team name we have the players function which grabs the position and player which are then nested within the followin print script. Thus the player and position they correspond with is printed. 
