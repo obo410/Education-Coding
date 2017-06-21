@@ -1,0 +1,11 @@
+["1", "23.0", "0", "4.1"].map {|x| x.to_i} #This converts original array into an array of integer values. It returns [1, 23, 0, 4]
+
+["1", "23.0", "0", "4.1"].map(&:to_i) #This is a different notation for the same thing 
+
+("a".."g").to_a.map {|i| i*2} #This returns ["aa", "bb", "cc", "dd", "ee", "ff", "gg"]
+
+#we want to convert an array of numbers to a hash that has a number as a key and a value as an integer value 
+
+Hash[[1, 2.1, 3.33, 0.9].map {|x| [x,x.to_i]}]
+
+#We are grabbing an array and iterating over it, we are taking two different values. An array (x,x.to_i) embedded within our main array (1, 2.1, 3.33, 0.9).  The array that solves is therefore going to give both the original array value and the integer value. Calling hash splits each element in the array into a key value pair. This returns {1=>1, 2.1=>2, 3.33=>3, 0.9=>0}
