@@ -1,0 +1,12 @@
+x = [12, 3, 5, 8, 55] #simplest way to create an array 
+
+y = Array.new #remember thay keyword must be capitalized 
+y [0] = 543
+y 
+ 
+y[10] = 432 
+y #This returns an array with nil values in everything but y[0] and y[10] through y[10] 
+
+y.each do |i| #This iterates over the array and ignores the nil values, it will result in the 543 for the first value and then skip all of the nil lines until reaching the tenth value (432)
+  puts i 
+end 
