@@ -1,0 +1,12 @@
+x = ["asdf", 3, 4, 12, "asdf", "b", true, 34, 4, 4, 4]
+x.length #gives number of elements in array "x"
+x.delete(4) #deletes all elements in array "x" equal to 4 
+x #displays array x in array format 
+
+x.delete_at(2) #this deletes the second element in the array, note that arrays begin with value zero. 
+x 
+
+y = x.delete_at(4) #defines a new variable that is equal to the fourth element in array 'x' that is alse being deleted. 
+
+batting_averages = [0.300, 0.180, 0.220, 0.250] 
+batting_averages.delete_if {|average| average < 0.24 } #This identifies each element as an 'average' and then states that if the average is less than 0.24 it should be deleted. 
