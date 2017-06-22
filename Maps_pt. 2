@@ -1,0 +1,5 @@
+Hash[%w(A dynamic open source language).map {|x| [x,x.length] }]
+#This function separates the text into elements in an array and then gives the length of each element (that is, the number of letters in the word)
+ #The following methods will convert the text to a URL 
+{:a => "foo", :b => "bar"}.map{|a, b| "#{a}=#{b}"}.join('&')
+#This function returns the following: a=foo&b=bar...The map function was able to convert the text we wanted to be URL safe 
