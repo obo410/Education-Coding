@@ -1,0 +1,4 @@
+#summing values in RUBY. Great method for summing in Ruby. 
+#in Ruby, our traditional operators (+, -, / etc.) are not operators but methods. The below code just passes * on each of these values and then inject sums them up.
+
+[2, 3, 4, 6666, 535].inject(&:*)
