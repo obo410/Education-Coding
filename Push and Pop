@@ -1,0 +1,10 @@
+teams=["astros", "yankees", "rangers", "mets", "cardinals"]
+#we want this array to be more practical. For example maybe we want to separate it into a string and put commas in between each element. Common for dumping strings into other file formats. 
+
+#Join iterates over each value. It will iterate each value and then sparate the values. 
+
+teams.push("marlins") #adds the marlins to the end of the array as another element. 
+
+teams.pop #this removes the last element in the array 
+
+z = teams.pop #this creates a variable from the last element of the array and also removes that element from the array. 
