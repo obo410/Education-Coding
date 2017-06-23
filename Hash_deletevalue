@@ -1,0 +1,8 @@
+#how to delete a hash 
+
+people = {jordan: 32, Tiffany:27, Kristine:10, Heather:29}
+people[:Tiffany]
+
+people.delete(:Kristine) #This deletes the Kristine value from the hash 
+
+people 
