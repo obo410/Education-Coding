@@ -1,0 +1,18 @@
+#Hash is a key value pair collection. each element includes two elements. It includes the value and the key to that value. A hash can have another hash nested in it. 
+
+positions = { first_base: "Chris Carter", second_base: "jose Altuve", short_stop: "Carlos Correa" }
+
+positions = { "first_base" =>"Chris Carter", "second_base" =>"jose Altuve", "short_stop" =>"Carlos Correa" } #this is the same thing we just use a "hash rocket" for our syntax
+
+positions = { :first_base =>"Chris Carter", :second_base =>"jose Altuve", :short_stop =>"Carlos Correa" } #Another way to write it 
+
+#if i want to grab one of the positions...
+
+positions[:second_base] #this calls out the element value I have in the given position. 
+
+#typical array grabbing an element is like this:
+
+x = [1, 4, 3, 4, 3, 3, 3]
+x [2]
+
+#the hash method can often be more practical for these situations because you can specify to grab a value that may change frequently. 
