@@ -1,0 +1,6 @@
+teams=["astros", "yankees", "rangers", "mets", "cardinals"]
+#we want this array to be more practical. For example maybe we want to separate it into a string and put commas in between each element. Common for dumping strings into other file formats. 
+
+#Join iterates over each value. It will iterate each value and then sparate the values. 
+
+teams.join('&') #separates the array values as a string separated by an & sign. Returns "astros&yankees&rangers&mets&cardinals"
