@@ -1,0 +1,8 @@
+people = {jordan: 32, Tiffany:27, Kristine:10, Heather:29}
+people.each_key do |key| #This iterates over the keys (names). REMEMBER hashes are made up of key-value pairs. 
+  puts key #prints just the keys
+end 
+
+people.each_value do |value|
+  puts value #This will print the value paired with each key
+end 
