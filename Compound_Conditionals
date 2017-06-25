@@ -1,0 +1,27 @@
+x = 10 
+y = 100 
+z = 10 
+
+if x == y 
+  if x == z 
+    puts "equal to anything"
+  end 
+end 
+
+#Above is a clunky way to write compound conditionals, below is a better syntax (more concise)
+
+if x == y && x == z #This says 'if x is equal to y and z' 
+  puts "from the if statement" 
+  
+end 
+
+if x == y || x == z #This says 'if x is equal to y or x is equal to z'
+  puts "or statement is true"
+end 
+
+
+#Another more complicated compound conditonal is as follows:
+
+if (x == 10 && x == z) || x == y #says 'if x equals ten and x equals z, or x equals y'
+  puts "from the if statement_2"
+end 
