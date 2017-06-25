@@ -1,0 +1,19 @@
+people = {jordan: 32, Tiffany:27, Kristine:10, Heather:29}
+
+#Lets see how to add to a hash 
+
+people[:leann] = 42 #This adds leann as a key and 42 as a value to the end of the hash 
+people 
+#what if we want to make the numbers the keys rather than the values and the names the values? 
+people.invert #This swaps the keys/values 
+
+people_2 = people.invert #This sets an array of value for the inverted array. 
+
+people.merge(people_2) #This merges the people hash and the people 2 hash so that the people array represents the first five key-value pairs and then the people_2 hash represents the last 5 key-value pairs. 
+
+#we can also convert the hashes into arrays, like so. 
+
+people.to_a #This converts the people hash into a 5 separate arrays (one for each key-value pair) 
+people.keys #This prints out all of the keys and puts them in an array. 
+
+people.values #This prints out all of the values and puts them in an array
