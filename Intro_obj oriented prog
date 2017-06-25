@@ -1,0 +1,25 @@
+class ApiConnector 
+  attr_accessor :title, :description, :url #We have just set the attributes or variables for our class through this. 
+end 
+
+#currently all we have is a class definition. Now we need to instantiate it 
+
+api = ApiConnector.new 
+
+api.url = "http://google.com/" #we are now calling the class 
+puts api.url
+
+#This is how you create a class, set it up, and then call it. 
+
+#we can also add methods to our class definition. 
+
+class ApiConnector 
+  attr_accessor :title, :description, :url #We have just set the attributes or variables for our class through this. 
+  def test_method
+puts "testing class call"
+end 
+end 
+
+api = ApiConnector.new 
+
+api.test_method #this is calling the method, it will return "testing class call"
