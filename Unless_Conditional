@@ -1,0 +1,16 @@
+#This conditional will run unless code is true. 
+
+players = ["Correa", "Carter", "Altuve"] #Setup array 
+unless players.empty? #This conditional is checking if the "players" array is empty. If it is not empty then players will be displayed. 
+players.each {|player| puts player}
+end 
+
+#Another way to write unless conditionals is like this: 
+players = ["Correa", "Carter", "Altuve"] #Setup array 
+if !players.empty? #The 'if !' syntax is saying this: if the players array is NOT empty then...
+players.each {|player| puts player}
+end 
+
+#You can also put all of the components on one line like this: 
+players = ["Correa", "Carter", "Altuve"]
+players.each {|player| puts player} unless players.empty? #This is saying the following "for the players array iterate over each element and print out the player name...unless the players array is empty."
