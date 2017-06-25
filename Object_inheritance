@@ -1,0 +1,25 @@
+#Now we will learn object oriented inheritance. With inheritance you have one parent class. see video: https://www.youtube.com/watch?v=_Qwlv4n0ZCo&index=46&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp 
+
+class ApiConnector
+  attr_accessor :title, :description, :url 
+  
+  def initialize(title, description, url = "google.com") #defining the initialize method 
+    @title = title #instance variables being defined 
+    @description = description
+    @url = url 
+end
+def testing_initializers #defining the method 
+  puts @title #prints the elements of the class
+  puts @description
+  puts @url 
+end 
+end 
+
+Class SmsConnector < ApiConnector #We are inheriting all of our methods from api connector 
+def send_sms #A good practice is that each class should have one responsibility. In other words, our ApiConnector shouldnt send sms, and mail. 
+end 
+
+
+api = Smsconnector.new(title: "My title", Description: "My description", url: "yahoo.com") #able to use same format as api connector because we are inheriting the methods from it. We are creating new values but able to use the same methods including the initializer method. 
+
+api.testing_initializers
