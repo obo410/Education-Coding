@@ -1,0 +1,43 @@
+#What is an Initialzer method? it is a method that happens every time a new version of the class is created 
+
+class ApiConnector
+  attr_accessor :title, :description, :url 
+  
+  def initialize(title, description, url = "google.com") #defining the initialize method 
+    @title = title #instance variables being defined 
+    @description = description
+    @url = url 
+end
+def testing_initializers #defining the method 'testing initializers'
+  puts @title #prints the elements of the class
+  puts @description
+  puts @url 
+end 
+end 
+
+api = ApiConnector.new("MyTitle", "My cool description", "google.com") #sets variable for ApiConnector
+
+api.testing_initializers 
+
+#What if we want to make one of our elements optional? 
+
+#Let's set up so that the url for most instances is a value but not for all. We can delete the "google.com" from line 18 and "google.com" will still print because we defined essentially a default value for url as "google.com" in the initialze method. 
+
+#ONe handy tip is to name all of our elements in our definitions. For example we can do the following and it clears up where values should be input and allows for easier manipulation. 
+
+class ApiConnector
+  attr_accessor :title, :description, :url 
+  
+  def initialize(title: title, description: description, url: url = "google.com") #defining the initialize method 
+    @title = title #instance variables being defined 
+    @description = description
+    @url = url 
+end
+def testing_initializers #defining the method 'testing initializers'
+  puts @title #prints the elements of the class
+  puts @description
+  puts @url 
+end 
+end 
+
+api = ApiConnector.new(title: "MyTitle",description: "My cool description",url: "yahoo.com") #sets variable for ApiConnector
