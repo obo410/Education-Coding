@@ -1,0 +1,21 @@
+#This tutorial will show us how to read files in Ruby. https://www.youtube.com/watch?v=7oUZvSfaS-Q&index=50&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp
+
+teams = file.read("files-lessons/teams.txt") #This calls teams 
+
+p teams #This will print the teams file as a string
+
+p teams.split #This will convert the teams file into an array rather than a string
+
+#What if we had multiple team files and wanted them all displayed in array format?
+
+teams_one = File.read("files-lessons/teams.txt")
+teams_two = File.read(""files-lessons/other_teams.txt"")
+
+
+p teams.split(', ') + teams_two.split(', ') #This will display both files as arrays and delimited with commas. 
+
+teams_master = teams.split(', ') + teams_two.split(', ') #We are setting what we just did to a variable 
+
+#we can create a block that capitalizes the 'teams_master' array 
+
+teams_master.each do |team|
