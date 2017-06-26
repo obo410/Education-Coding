@@ -1,0 +1,15 @@
+#This tutorial will show us how to create files and some general file know-how. https://www.youtube.com/watch?v=X7cHdhXPOAA&index=49&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp
+
+File.open("files=lessons/teams.txt", 'w+') {|f| f.write("Twins, Astros, Mets, Yankees") #This will open a file called 'teams' and it will print the string Twins, Astros, Mets, Yankees
+
+#r - reading 
+#a - appending 
+#w - just writing 
+#w+ - read and write 
+#a+ - open a file for reading and appending 
+#r+ - opening a file for updating both read and write 
+
+
+file_to_save = file.new("files=lessons/other_teams.txt", 'w+')
+file_to_save.puts("A's, Diamondbacks, Mariners, Rangers") 
+file_to_save.close #This will create a file 'other teams' and then print the string written above in the file. 
