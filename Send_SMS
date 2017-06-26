@@ -1,0 +1,45 @@
+#This tutorial will show us how to send an SMS message. https://www.youtube.com/watch?v=BE1akIrWmYE&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp&index=47&spfreload=1
+
+class ApiConnector 
+attr_accessor :title, :description, :url 
+
+def initialize(title: title, description: description, url: url="google.com")
+  @title = title 
+  @description = description 
+  @url = url 
+  secret_method
+end 
+
+private 
+def secret_method 
+  puts "a secret message from inside the class"
+
+def testing_initializers
+  puts @title 
+  puts @description 
+  puts @url 
+end 
+
+
+class SmsConnector < ApiConnector 
+  def send_sms 
+    #Input complex code here 
+    private #when something is private it means that only that specific class is able to access it. It is useful for setting a method that only runs for the class and not for other classes. This is a good Ruby practice. private methods should be within the declared class. This prvate method would only work in the 'SmsConnector' class.  
+  end 
+end 
+
+class PhoneConnector < ApiConnector
+  def send_phone_call
+    puts "sending phone call..."
+  end 
+end 
+
+class MailConnector < ApiConnector 
+  def send_mail 
+    puts "sending mail..."
+  end 
+end 
+
+sms = SmsConnector.new(title: "My title", description: "My description", url: "url of interest")
+
+sms.send_sms #This code will send to a public site referencing from another public site. 
