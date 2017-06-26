@@ -1,0 +1,61 @@
+#This tutorial will show us how to use polymorphisma and explain what polymorphism is https://www.youtube.com/watch?v=IrvftFzT43Q&index=48&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp
+
+#polymorphism is When an inherited class changes the behavior of a parent class. We will use the same code we have been using. 
+
+class ApiConnector 
+attr_accessor :title, :description, :url 
+
+def initialize(title: title, description: description, url: url="google.com")
+  @title = title 
+  @description = description 
+  @url = url 
+  secret_method
+end 
+
+#new code for polymorphism: 
+
+def api_logger 
+  puts "API connector starting..."
+
+private 
+def secret_method 
+  puts "a secret message from inside the class"
+
+def testing_initializers
+  puts @title 
+  puts @description 
+  puts @url 
+end 
+
+
+class SmsConnector < ApiConnector 
+  def send_sms 
+    #Input complex code here 
+    private 
+  end 
+end 
+
+class PhoneConnector < ApiConnector
+  
+  def api_logger
+    puts "phone call connection starting..." #even though we have the api_logger in the initialize method this will override the intialize method 
+    super #This will ensure that the new method for api_logger does not supercede the initial one. With the Super command neither will be ignored and Ruby will place both. 
+  end 
+    
+    
+  def send_phone_call
+    puts "sending phone call..."
+  end 
+end 
+
+class MailConnector < ApiConnector 
+  def send_mail 
+    puts "sending mail..."
+  end 
+end 
+
+sms = SmsConnector.new(title: "My title", description: "My description", url: "url of interest")
+
+sms.send_sms 
+
+phone.api_logger #This relates to our polymorphism lesson
