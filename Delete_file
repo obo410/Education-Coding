@@ -1,0 +1,3 @@
+#Deleting a file 
+
+File.delete("files-lessons", teams.txt) #This deletes the teams file, be aware that no warning is given. 
