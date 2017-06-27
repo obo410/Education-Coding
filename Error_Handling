@@ -1,0 +1,30 @@
+#Error Handling tutorial. This tutorial can better organize errors. https://www.youtube.com/watch?v=mmcI_xKG6tk&list=PLgYiyoyNPrv9GUToqLWapjDoyk-yXThcp&index=53
+
+begin 
+puts 8/0
+rescue #rescue is a quick and dirty way to fix code errors 
+puts "Rescued the error"
+end 
+
+begin 
+puts 8/0
+rescue ZeroDivisionError => e #associates a variable with the error 
+puts "Error Occurred: #{e}" #running this will return: 'Error Occurred: divided by 0' 
+
+end 
+
+begin 
+puts nil + 10 
+rescue ZeroDivisionError => e  #ZeroDivisionError
+puts "Error Occurred: #{e}" 
+
+end 
+
+#This gives us an error (no method errror). The rescue block only rescues the zero division error. 
+
+begin 
+puts nil + 10 
+rescue StandardError => e  #The rescue block provides documentation for errors. 
+puts "Error Occurred: #{e}" 
+
+end 
