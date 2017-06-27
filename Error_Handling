@@ -28,3 +28,14 @@ rescue StandardError => e  #The rescue block provides documentation for errors.
 puts "Error Occurred: #{e}" 
 
 end 
+
+def error_logger(e)
+  File.open('error-handling-lessons/error_log.txt', 'a') do |file|
+    file.puts e 
+  end 
+end 
+
+begin 
+puts nil + 10 
+rescue error_logger("Error: #{e} at #{Time.now}") #This will provde a time stamp and send the error message to an error log file. 
+end 
