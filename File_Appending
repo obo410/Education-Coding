@@ -1,0 +1,6 @@
+10.times do 
+  sleep 1 
+  puts "record saved" #These three lines indicate that "record saved" will be placed 10 times with a 1 second gap between each time it is placed. 
+  File.open("files-lessons/server_logs.txt", "a") #This appends to whatever is in the file {|f| f.puts "server started at: #{Time.new}"} #This will put "server started at (time stamp)"
+end
+
